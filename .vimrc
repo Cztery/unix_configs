@@ -21,7 +21,7 @@ nnoremap <leader>st :match Error /\v\t+/
 
 set incsearch     " Makes search act like search in modern browsers
 
-set ingorecase    " Ignore case when searching
+set ignorecase    " Ignore case when searching
 
 set smartcase     " When searching try to be smart about cases 
 
