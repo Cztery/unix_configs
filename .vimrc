@@ -52,9 +52,18 @@ map <leader>q :call ToggleNotebook()<cr>
 
 function! ToggleNotebook()
     let l:notebook="~/buffer"
-    if expand('%') == expand(notebook)
+    if expand('%:p') == expand(l:notebook)
         :wq
     else
-        execute "vsplit" l:notebook
+        execute "split" l:notebook
     endif
 endfunction
+
+" Returns true if paste mode is enabled
+function! HasPaste()
+  if &paste
+    return 'PASTE MODE '
+  endif
+  return ''
+endfunction
+
