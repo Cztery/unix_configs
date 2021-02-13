@@ -46,3 +46,15 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
+
+
+map <leader>q :call ToggleNotebook()<cr>
+
+function! ToggleNotebook()
+    let l:notebook="~/buffer"
+    if expand('%') == expand(notebook)
+        :wq
+    else
+        execute "vsplit" l:notebook
+    endif
+endfunction
