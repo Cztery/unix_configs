@@ -67,3 +67,7 @@ function! HasPaste()
   return ''
 endfunction
 
+
+" Mark lines exceeding 80 characters
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
