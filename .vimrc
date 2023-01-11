@@ -5,6 +5,7 @@ set autochdir
 
 set number
 set cursorline
+set cursorcolumn
 set ruler         " Show line and column number of a cursor position
 
 colorscheme elflord
